@@ -1,0 +1,200 @@
+@charset 'utf-8';
+/*
+*author chengxiangdong
+*
+*creatDate 2015/03/23
+*
+*description the common.sass for petshops
+*/
+
+/*定义颜色变量*/
+$col-fff:#ffffff;
+$col-ccc:#cccccc;
+
+
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,span{
+  margin: 0;
+  padding: 0
+}
+
+h1,h2,h3,h4,h5,h6,input,textarea,select,button{
+  font-size: 100%;
+  font-weight: normal;
+}
+
+
+ul,ol{
+  list-style: none;
+}
+
+
+html,body{
+  font-family: Arial,Helvetica,sans-serif;
+  -webkit-user-select: none;
+  user-select: none;
+  height: 100%;
+  background: #efeff4;
+  width: 100%;
+ }
+
+
+img{
+  -webkit-touch-callout: none;
+}
+
+ins{
+  text-decoration: none;
+}
+
+a{
+  -webkit-touch-callout: none;
+  text-decoration: none;
+
+  &:hover{
+    text-decoration: none;
+  };
+
+}
+
+
+table, th, tr, td{
+  border: none;
+}
+
+
+textarea,input{
+  border: none;
+  outline: none;
+  background-color: $col-fff;
+  border-radius: 0;}
+
+
+input,textarea{
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+
+input{
+  &:focus{
+    background-color:$col-fff;
+  };
+  &:disabled{
+    color: #000000;
+  };
+  &::-webkit-input-placeholder{
+    color:$col-ccc;
+  };
+}
+
+
+.tips{
+    position: absolute; 
+    z-index: 99999; 
+    left: 0; top: 12rem; 
+    right: 0;margin: auto; 
+    background: #000000; 
+    height: 2.5rem; 
+    padding:0.1rem 0; 
+    border-radius: 0.25rem; 
+    text-align: center; 
+    color: #fff; 
+    font-size: 0.7rem;
+    display: -webkit-box; 
+    -webkit-box-orient: horizontal; 
+    -webkit-box-pack: center; 
+    -webkit-box-align: center;
+}
+
+.fadeOut{
+
+    -webkit-animation: fadeOut 5s 1s ease-in-out;;
+}
+
+
+@-webkit-keyframes fadeOut{
+  0%{opacity: 0.7;}
+  100%{opacity: 0;}
+}
+
+@-ms-keyframes fadeOut{
+  0%{opacity: 0.7;}
+  100%{opacity: 0;}
+}
+
+@-o-keyframes fadeOut{
+  0%{opacity: 0.7;}
+  100%{opacity: 0;}
+}
+
+@-moz-keyframes fadeOut{
+  0%{opacity: 0.7;}
+  100%{opacity: 0;}
+}
+
+@keyframes fadeOut{
+  0%{opacity: 0.7;}
+  100%{opacity: 0;}
+}
+
+
+/*loading*/
+.loadingBox{
+    width: 100%;
+    height: 100%;
+    z-index: 1100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    display: none;
+    opacity: 0.6;
+}
+
+.spinner{
+  position: relative;
+   top: 50%; 
+   margin: -30px auto 0;
+   width: 8rem;
+   height: 60px;
+   text-align: center; 
+   font-size: 10px;
+ }
+
+
+.spinner > div{
+  background-color: #70b1df;
+   height: 100%; 
+   width: 6px; 
+   margin: 0 2px; 
+   display: inline-block; 
+   -webkit-animation: stretchdelay 1.2s infinite ease-in-out; 
+   animation: stretchdelay 1.2s infinite ease-in-out;
+ }
+
+
+.spinner .rect2{
+  -webkit-animation-delay: -1.1s; 
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3{
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4{
+  -webkit-animation-delay: -0.9s;
+   animation-delay: -0.9s;
+ }
+
+.spinner .rect5{
+  -webkit-animation-delay: -0.8s; 
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes stretchdelay{
+  0%, 40%, 100%{-webkit-transform: scaleY(0.4)} 20%{-webkit-transform: scaleY(1.0)}
+} 
+
+@keyframes stretchdelay{0%, 40%, 100%{transform: scaleY(0.4); -webkit-transform: scaleY(0.4);}20%{transform: scaleY(1.0); -webkit-transform: scaleY(1.0);}}
